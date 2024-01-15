@@ -323,41 +323,94 @@
     </div>
     <!--======  End Section Title Five ======-->
     <div class="container">
-      <div class="row">
-            @foreach (var item in Model)
-            {
-<div class="col-lg-4 col-md-6 col-12">
-    <div class="pricing-style-fourteen">
-      <div class="table-head">
-        <h6 class="title">Starter</h6>
-          <p>@item.Description</p>
-          <div class="price">
-            <h2 class="amount">
-              <span class="currency">$</span>0<span class="duration">/mo </span>
-            </h2>
-          </div>
-
-      <div class="light-rounded-buttons">
-        <a href="javascript:void(0)" class="btn primary-btn-outline">
-          Start free trial
-        </a>
-      </div>
-
-      <div class="table-content">
-        <ul class="table-list">
-          <li> <i class="lni lni-checkmark-circle"></i> Cras justo odio.</li>
-          <li> <i class="lni lni-checkmark-circle"></i> Dapibus ac facilisis in.</li>
-          <li> <i class="lni lni-checkmark-circle deactive"></i> Morbi leo risus.</li>
-          <li> <i class="lni lni-checkmark-circle deactive"></i> Excepteur sint occaecat velit.</li>
-        </ul>
-      </div>
-                        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services">
+                    <div class="service-icon">
+                        <i class="lni lni-capsule"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>Refreshing Design</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
+                            eirmod tempor ividunt labor dolore magna.
+                        </p>
                     </div>
                 </div>
-                
-            }
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services">
+                    <div class="service-icon">
+                        <i class="lni lni-bootstrap"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>Solid Bootstrap 5</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
+                            eirmod tempor ividunt labor dolore magna.
+                        </p>
                     </div>
                 </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services">
+                    <div class="service-icon">
+                        <i class="lni lni-shortcode"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>100+ Components</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
+                            eirmod tempor ividunt labor dolore magna.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services">
+                    <div class="service-icon">
+                        <i class="lni lni-dashboard"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>Speed Optimized</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
+                            eirmod tempor ividunt labor dolore magna.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services">
+                    <div class="service-icon">
+                        <i class="lni lni-layers"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>Fully Customizable</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
+                            eirmod tempor ividunt labor dolore magna.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services">
+                    <div class="service-icon">
+                        <i class="lni lni-reload"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>Regular Updates</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, adipscing elitr, sed diam nonumy
+                            eirmod tempor ividunt labor dolore magna.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
   </section>
   <!--/ End Pricing  Area -->
 
@@ -413,7 +466,9 @@
     <!--======  End Section Title Five ======-->
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 col-md-6 col-12">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 col-12">
           <!-- Single News -->
           <div class="single-news">
             <div class="image">
@@ -425,67 +480,16 @@
             </div>
             <div class="content-body">
               <h4 class="title">
-                <a href="javascript:void(0)"> Make your team a Design driven company </a>
+                <a href="javascript:void(0)">@item.Title</a>
               </h4>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry. Lorem Ipsum has been the industry's
-                standard.
+                @item.Description
               </p>
             </div>
           </div>
           <!-- End Single News -->
         </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <!-- Single News -->
-          <div class="single-news">
-            <div class="image">
-              <a href="javascript:void(0)"><img class="thumb" src="~/assets/images/blog/2.jpg" alt="Blog" /></a>
-              <div class="meta-details">
-                <img class="thumb" src="~/assets/images/blog/b6.jpg" alt="Author" />
-                <span>BY TIM NORTON</span>
-              </div>
-            </div>
-            <div class="content-body">
-              <h4 class="title">
-                <a href="javascript:void(0)">
-                  The newest web framework that changed the world
-                </a>
-              </h4>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry. Lorem Ipsum has been the industry's
-                standard.
-              </p>
-            </div>
-          </div>
-          <!-- End Single News -->
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-          <!-- Single News -->
-          <div class="single-news">
-            <div class="image">
-              <a href="javascript:void(0)"><img class="thumb" src="~/assets/images/blog/3.jpg" alt="Blog" /></a>
-              <div class="meta-details">
-                <img class="thumb" src="~/assets/images/blog/b6.jpg" alt="Author" />
-                <span>BY TIM NORTON</span>
-              </div>
-            </div>
-            <div class="content-body">
-              <h4 class="title">
-                <a href="javascript:void(0)">
-                  5 ways to improve user retention for your startup
-                </a>
-              </h4>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry. Lorem Ipsum has been the industry's
-                standard.
-              </p>
-            </div>
-          </div>
-          <!-- End Single News -->
-        </div>
+            }
       </div>
     </div>
   </div>

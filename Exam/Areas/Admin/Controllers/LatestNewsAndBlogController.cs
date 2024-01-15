@@ -1,12 +1,14 @@
 ﻿using Exam.Contexts;
 using Exam.Models;
 using Exam.ViewModels.LatestNewsAndBlogVMs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Exam.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles ="Admin")]
     public class LatestNewsAndBlogController : Controller
     {
         ExamDbContext _context {  get; }
