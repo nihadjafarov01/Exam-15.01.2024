@@ -1,5 +1,6 @@
 ﻿using Exam.Contexts;
 using Exam.Models;
+using Exam.ViewModels.LatestNewsAndBlogVMs;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -16,7 +17,14 @@ namespace Exam.Controllers
 
         public IActionResult Index()
         {
-            var data = _context.LatestNewsAndBlogs.ToList();
+            List<LatestNewsAndBlogListItemVM> data = _context.LatestNewsAndBlogs.Select(l => new LatestNewsAndBlogListItemVM
+            {
+                AuthorId = l.AuthorId,
+                Title = l.Title,
+                Description = l.Description,
+                Id = l.Id,
+                ImageUrl = l.ImageUrl,
+            }).ToList();
             return View(data);
         }
     }
