@@ -1,0 +1,26 @@
+﻿@using Exam.ViewModels.LatestNewsAndBlogVMs;
+@model LatestNewsAndBlogUpdateVM
+
+<form asp-route="Create" method="post">
+    <div class="form-group">
+        <label>ImageUrl</label>
+        <input asp-for="ImageUrl" type="text" class="form-control">
+        <span class="text-danger" asp-validation-for="ImageUrl"></span>
+    </div>
+    <div class="form-group">
+        <label>Title</label>
+        <input asp-for="Title" type="text" class="form-control">
+        <span class="text-danger" asp-validation-for="Title"></span>
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <input asp-for="Description" type="text" class="form-control">
+        <span class="text-danger" asp-validation-for="Description"></span>
+    </div>
+    <div class="form-group">
+        <label>AuthorId</label>
+        <input asp-for="AuthorId" type="text" class="form-control">
+        <span class="text-danger" asp-validation-for="AuthorId"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
